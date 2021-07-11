@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+
 namespace Domain.Services
 {
     public class UserService : IUserService
@@ -34,7 +35,7 @@ namespace Domain.Services
             return user;
         }
 
-        public void Create(UserRegisterRequest request)
+        public User Create(UserRegisterRequest request)
         {
             if (string.IsNullOrEmpty(request?.UserName) || string.IsNullOrEmpty(request?.Password))
                 throw new ArgumentException("UserName or Password is missing");
@@ -47,6 +48,7 @@ namespace Domain.Services
             repo.Add(user);
 
             repo.SaveChanges();
+            return user;
         }
 
         public List<User> GetAll()

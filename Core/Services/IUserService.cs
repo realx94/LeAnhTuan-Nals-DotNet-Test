@@ -7,7 +7,7 @@ namespace Core.Services
     public interface IUserService
     {
         User Authenticate(UserLoginRequest request);
-        void Create(UserRegisterRequest request);
+        User Create(UserRegisterRequest request);
         List<User> GetAll();
     }
 }
