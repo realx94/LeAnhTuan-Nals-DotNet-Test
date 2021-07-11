@@ -7,6 +7,14 @@ NPM RUN INSTALL
 ```
 - RUN ASP.NET Application in visual studio
 - - Wait a momment and refresh page if it show error page.
+## Git Repository 
+**https://github.com/realx94/LeAnhTuan-Nals-DotNet-Test**
+Repository has 4 branches
+- Master
+- Release (Code to release)
+- Develop (Code in develop)
+- Feature/Authentication (Code of Authentication fuction. It will be belete after merge to Develop branch).
+
 ## Authentication method
 - API using JwtBearer for authentication.
 - IAuthenticationManager to generate and verify token.
