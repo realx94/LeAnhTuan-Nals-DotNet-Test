@@ -25,12 +25,12 @@ namespace Authentication.Controllers
 
         protected IActionResult CreateFailResult(string error)
         {
-            return this.BadRequest(new FailActionResponse(error));
+            return this.Ok(new FailActionResponse(error));
         }
 
         protected IActionResult CreateFailResult(string error, int errorCode)
         {
-            return this.BadRequest(new FailActionResponse(error, errorCode));
+            return this.Ok(new FailActionResponse(error, errorCode));
         }
 
     }

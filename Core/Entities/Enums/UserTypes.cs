@@ -2,8 +2,8 @@
 {
     public enum UserTypes
     {
-        Normal,
-        Admin,
-        Partner
+        User = 0,
+        Admin = 1,
+        Partner = 2
     }
 }

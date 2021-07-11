@@ -1,8 +1,6 @@
 ﻿using Core.Entities;
+using Infrastructure.Context.Configurations;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Infrastructure.Context
 {
@@ -16,6 +14,9 @@ namespace Infrastructure.Context
         public DbSet<User> Users { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
         }
     }
 }

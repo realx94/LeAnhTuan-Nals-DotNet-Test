@@ -1,4 +1,4 @@
-# vueapp
+# auth
 
 ## Project setup
 ```

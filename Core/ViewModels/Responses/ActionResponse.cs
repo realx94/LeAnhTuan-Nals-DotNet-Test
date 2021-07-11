@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Core.ViewModels.Responses
+﻿namespace Core.ViewModels.Responses
 {
     public class ActionResponse
     {
