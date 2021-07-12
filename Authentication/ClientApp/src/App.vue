@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { mapActions, mapState } from "vuex";
+import { mapActions } from "vuex";
 export default {
   name: "App",
   methods: {
@@ -15,10 +15,9 @@ export default {
   computed: {
     isAuthorized() {
       return this.$store.state.users.user.isAuthorized;
-    }
+    },
   },
-  created(){
-  }
+  created() {},
 };
 </script>
 
@@ -103,6 +102,10 @@ label {
 }
 .invalid-feedback {
   color: red;
+}
+
+.info {
+  color: green;
 }
 </style>
 
