@@ -32,6 +32,16 @@ const actions = {
     },
     reloadUser({ commit }) {
         commit("UpdateUser");
+    },
+    testUser({ commit }) {
+        return new Promise(function (resolve, reject) {
+            api.test().then(function (response) {
+                resolve(response.data);
+            }).catch(function (err) {
+                reject(err)
+                commit();
+            });
+        });
     }
 }
 

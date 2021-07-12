@@ -7,5 +7,8 @@ export default {
     },
     login(data){
         return axios.post(mapUrl("api/users/login"), data);
+    },
+    test(){
+        return axios.get(mapUrl("api/users/test"));
     }
 }
