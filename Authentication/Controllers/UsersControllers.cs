@@ -70,6 +70,14 @@ namespace Authentication.Controllers
         }
 
         [HttpGet]
+        [Route("test")]
+        [JwtAuth()]
+        public IActionResult Test()
+        {
+            return CreateSuccessResult("This API Access by Auth User");
+        }
+
+        [HttpGet]
         [Route("AdminOnly")]
         [JwtAuth(UserTypes.Admin)]
         public IActionResult AdminOnly()

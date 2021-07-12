@@ -3,6 +3,7 @@
     <h1>This is Home page</h1>
     <h2>Hello {{ user.userName }}</h2>
     <h2>Account type is {{ user.typeName }}</h2>
+    <h2 class="info">Result from API: {{ apiResult }}</h2>
     <h3 v-if="user.type == '0'">
       This line will show to user with type is User
     </h3>
@@ -17,12 +18,28 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
   name: "HelloWorld",
   computed: {
     user() {
       return this.$store.state.users.user;
     },
+  },
+  data() {
+    return {
+      apiResult: "",
+    };
+  },
+  methods: {
+    ...mapActions("users", ["testUser"]),
+  },
+  created() {
+    this.testUser().then((data) => {
+      if (data.success) this.apiResult = data.result;
+      else this.apiResult = data.message;
+    });
   },
 };
 </script>
