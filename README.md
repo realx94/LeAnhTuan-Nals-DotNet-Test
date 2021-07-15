@@ -3,7 +3,7 @@
 ##Setup
 - Run below code in **Authentication\ClientApp** folder to install UI Package 
 ```
-NPM RUN INSTALL
+NPM INSTALL
 ```
 - RUN ASP.NET Application in visual studio
 - - Wait a momment and refresh page if it show error page.
